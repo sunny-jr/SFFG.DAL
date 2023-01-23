@@ -1,0 +1,14 @@
+C:\Users\Sunny\OneDrive\Desktop\SFFG_Proj\SFFG.API\SFFG.DAL\bin\Debug\net6.0\SFFG.DAL.deps.json
+C:\Users\Sunny\OneDrive\Desktop\SFFG_Proj\SFFG.API\SFFG.DAL\bin\Debug\net6.0\SFFG.DAL.runtimeconfig.json
+C:\Users\Sunny\OneDrive\Desktop\SFFG_Proj\SFFG.API\SFFG.DAL\bin\Debug\net6.0\SFFG.DAL.dll
+C:\Users\Sunny\OneDrive\Desktop\SFFG_Proj\SFFG.API\SFFG.DAL\bin\Debug\net6.0\SFFG.DAL.pdb
+C:\Users\Sunny\OneDrive\Desktop\SFFG_Proj\SFFG.API\SFFG.DAL\obj\Debug\net6.0\SFFG.DAL.csproj.AssemblyReference.cache
+C:\Users\Sunny\OneDrive\Desktop\SFFG_Proj\SFFG.API\SFFG.DAL\obj\Debug\net6.0\SFFG.DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Sunny\OneDrive\Desktop\SFFG_Proj\SFFG.API\SFFG.DAL\obj\Debug\net6.0\SFFG.DAL.AssemblyInfoInputs.cache
+C:\Users\Sunny\OneDrive\Desktop\SFFG_Proj\SFFG.API\SFFG.DAL\obj\Debug\net6.0\SFFG.DAL.AssemblyInfo.cs
+C:\Users\Sunny\OneDrive\Desktop\SFFG_Proj\SFFG.API\SFFG.DAL\obj\Debug\net6.0\SFFG.DAL.csproj.CoreCompileInputs.cache
+C:\Users\Sunny\OneDrive\Desktop\SFFG_Proj\SFFG.API\SFFG.DAL\obj\Debug\net6.0\SFFG.DAL.dll
+C:\Users\Sunny\OneDrive\Desktop\SFFG_Proj\SFFG.API\SFFG.DAL\obj\Debug\net6.0\refint\SFFG.DAL.dll
+C:\Users\Sunny\OneDrive\Desktop\SFFG_Proj\SFFG.API\SFFG.DAL\obj\Debug\net6.0\SFFG.DAL.pdb
+C:\Users\Sunny\OneDrive\Desktop\SFFG_Proj\SFFG.API\SFFG.DAL\obj\Debug\net6.0\SFFG.DAL.genruntimeconfig.cache
+C:\Users\Sunny\OneDrive\Desktop\SFFG_Proj\SFFG.API\SFFG.DAL\obj\Debug\net6.0\ref\SFFG.DAL.dll
