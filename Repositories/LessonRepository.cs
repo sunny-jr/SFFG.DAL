@@ -15,13 +15,14 @@ namespace SFFG.DAL.Repositories
         {
             this.dbContext = dbContext;
         }
-        public bool CreateLesson(int secId, Lesson lesson)
+        public bool CreateLesson(Lesson lesson)
         {
-            var isSectionExist = dbContext.MisSections.FirstOrDefault(s => s.Id == secId);
+            var isSectionExist = dbContext.MisSections.FirstOrDefault(s => s.Id == lesson.SectionId);
             if (isSectionExist == null) return false;
 
             if (isSectionExist != null)
             {
+                lesson.DateCreated = DateTime.Now;
                 isSectionExist.Lessons.Add(lesson);
                 dbContext.SaveChanges();
                 return true;

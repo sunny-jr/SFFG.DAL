@@ -22,66 +22,67 @@ namespace SFFG.DAL.Repositories
         public User? GetUserById(string id)
         {
 
-                var user = _dbContext!.Users.FirstOrDefault(x => x.UserId.Equals(id));
-                if (user is not null) return user;
+            var user = _dbContext.Users.Include(m => m.Section).FirstOrDefault(x => x.UserId.Equals(id));
+            if (user is not null) return user;
 
-                return null;
+            return null;
 
         }
 
-        public User? FindUser(string userId , string password)
+        public User? FindUser(string userId, string password)
         {
-                var user = _dbContext.Users.FirstOrDefault(x => x.UserId.Equals(userId) && x.Password!.Equals(password));
-                if (user is not null) return user;
+            var user = _dbContext.Users.Include(m => m.Section).FirstOrDefault(x => x.UserId.Equals(userId) && x.Password!.Equals(password));
 
-                return null;
+            if (user is not null) return user;
+
+            return null;
 
 
         }
 
         public bool AddNewUser(User user)
         {
-          
-                if(user is not null)
-                {
+
+            if (user is not null)
+            {
                 _dbContext.Users.Add(user);
                 _dbContext.SaveChanges();
-                    return true;
-                }
+                return true;
+            }
 
-                return false;
+            return false;
 
         }
 
         public bool SaveRefreshToken(RefreshToken token)
         {
-          //  using (var dbContext = _dbContext)
-           // {
-                if (token is not null)
-                {
+            //  using (var dbContext = _dbContext)
+            // {
+            if (token is not null)
+            {
                 _dbContext.RefreshTokens.Add(token);
                 _dbContext.SaveChanges();
-                    return true;
-                }
+                return true;
+            }
 
-                return false;
+            return false;
 
 
-           // }
+            // }
         }
 
         public RefreshToken GetSavedRefreshTokens(string userId, string refreshToken)
         {
-           // using (var dbContext = _dbContext)
-           // {
+            // using (var dbContext = _dbContext)
+            // {
 
-               var x = _dbContext.RefreshTokens.FirstOrDefault(x => x.UserId == userId && x.RefToken == refreshToken && x.IsActive == 1);
-                if (x is not null) return x;
+            var x = _dbContext.RefreshTokens.FirstOrDefault(x => x.UserId == userId && x.RefToken == refreshToken && x.IsActive == 1);
+            if (x is not null) return x;
 
-                return new RefreshToken();
-           // }
+            return new RefreshToken();
+            // }
 
-           
+
         }
 
 
@@ -90,19 +91,19 @@ namespace SFFG.DAL.Repositories
             //using (var dbContext = _dbContext)
             //{
 
-               if(userId != String.Empty && refreshToken != String.Empty)
+            if (userId != String.Empty && refreshToken != String.Empty)
+            {
+                var toRemove = _dbContext.RefreshTokens.FirstOrDefault(x => x.UserId == userId && x.RefToken == refreshToken);
+                if (toRemove is not null)
                 {
-                    var toRemove = _dbContext.RefreshTokens.FirstOrDefault(x => x.UserId == userId && x.RefToken == refreshToken);
-                    if (toRemove is not null)
-                    {
                     _dbContext.Remove(toRemove);
                     _dbContext.SaveChanges();
-                        return true;
-                    }
-                    return false;
+                    return true;
                 }
-
                 return false;
+            }
+
+            return false;
             //}
 
 

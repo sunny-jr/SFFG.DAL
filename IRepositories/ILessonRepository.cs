@@ -9,7 +9,7 @@ namespace SFFG.DAL.IRepositories
 {
     public interface ILessonRepository
     {
-       bool CreateLesson(int secId, Lesson lesson);
+       bool CreateLesson(Lesson lesson);
 
         List<Lesson> GetLessons(int secId);
 
