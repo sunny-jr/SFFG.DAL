@@ -34,7 +34,7 @@ namespace SFFG.DAL.Repositories
 
         public bool DeleteLesson(int id)
         {
-            if (id < 0)
+            if (id > -1)
             {
                 var lesson = ViewLesson(id);
                 if (lesson == null) return false;
@@ -77,7 +77,7 @@ namespace SFFG.DAL.Repositories
 
         public Lesson? ViewLesson(int id)
         {
-            if (id < 0)
+            if (id > -1)
             {
                 return dbContext.Lessons.FirstOrDefault(v => v.Id == id);
             }
