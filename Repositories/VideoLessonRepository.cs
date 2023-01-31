@@ -16,14 +16,13 @@ namespace SFFG.DAL.Repositories
         {
             this.dbContext = dbContext;
         }
-        public bool CreateVideoLesson(int secId, VideoLesson lesson)
+        public bool CreateVideoLesson(VideoLesson video)
         {
-            var isSectionExist = dbContext.MisSections.FirstOrDefault(s => s.Id == secId);
-            if (isSectionExist == null) return false;
+            var isSectionExist = dbContext.MisSections.FirstOrDefault(s => s.Id == video.SectionId);
 
-            if (secId > 0 && lesson != null)
+            if (video != null && isSectionExist != null)
             {
-                dbContext.VideoLessons.Add(lesson);
+                isSectionExist.VideoLessons.Add(video);
                 dbContext.SaveChanges();
                 return true;
             }

@@ -160,7 +160,7 @@ namespace SFFG.DAL.Entities
             modelBuilder.Entity<VideoLesson>(entity =>
             {
                 entity.Property(e => e.Id)
-                    .ValueGeneratedNever()
+                    .ValueGeneratedOnAdd()
                     .HasColumnName("id");
 
                 entity.Property(e => e.DateCreated).HasColumnName("dateCreated");

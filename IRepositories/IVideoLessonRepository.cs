@@ -9,7 +9,7 @@ namespace SFFG.DAL.IRepositories
 {
     public interface IVideoLessonRepository
     {
-        bool CreateVideoLesson(int secId, VideoLesson lesson);
+        bool CreateVideoLesson(VideoLesson lesson);
 
         List<VideoLesson> GetVideoLessons(int secId);
 

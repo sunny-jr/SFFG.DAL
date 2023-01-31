@@ -50,7 +50,7 @@ namespace SFFG.DAL.Repositories
 
         public List<Lesson> GetLessons(int secId)
         {
-            if (secId < 0)
+            if (secId > -1)
             {
                 return dbContext.Lessons.Where(s => s.SectionId == secId).ToList();
             }
